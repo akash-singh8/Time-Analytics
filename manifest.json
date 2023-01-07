@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "author": "AKASH KUMAR SINGH",
+    "name": "TIME ANALYTICS",
+    "description": "Empowers users to analyze the time they spend on websites in their daily life.",
+    "version": "1.0.0",
+
+    "action": {
+        "default_icon": {
+          "16": "logo.png",
+          "24": "logo.png",
+          "32": "logo.png"
+        },
+        "default_title": "TIME ANALYTICS",
+        "default_popup": "popup.html"
+     },
+
+    "icons": {
+        "96": "logo.png"
+    },
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    
+    "permissions": ["activeTab", "tabs", "storage"]
+}
