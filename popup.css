@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #333;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    width: 320px;
+    min-height: 500px;
+}
+
+header{
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 5px;
+    user-select: none;
+}
+header img{
+    width: 25px;
+    margin: 0 5px;
+}
+
+
+#chart{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+#siteChart{
+    transition: all 0.25s ease-in-out;
+}
+
+#siteChart:hover{
+    transform: scale(1.03);
+}
+
+
+#total{
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    position: absolute;
+    top: 92px;
+    left: 134px;
+}
+
+
+#details_head{
+    background: rgb(51,51,51);
+    background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(255,255,255,0.07) 100%);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 0.8px;
+    padding: 10px 12px;
+    margin: 0 15px;
+    margin-bottom: -168px;
+    height: 180px;
+}
+
+
+/* ANALYTICS Website details */
+#analytics{
+    max-height: 198px;
+    margin: 0 20px;
+    padding: 10px 15px 0 15px;
+    overflow-y: scroll;
+}
+
+.siteDetails{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px 12px 12px;
+    user-select: none;
+    margin-bottom: 16px;
+    transition: all 0.25s ease-in-out;
+}
+
+.siteDetails:hover{
+    transform: scale(1.04);
+}
+
+.favIcon{
+    width: 24px;
+}
+
+.detailsParent{
+    width: 188px;
+    margin-left: 8px;
+}
+
+.details{
+    display: flex;
+    font-size: 13px;
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+.siteName{
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+.hourProgress{
+    height: 5px;
+    box-shadow: 0 0 4px rgb(240, 240, 240);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 6px;
+}
+
+
+
+footer{
+    background-color: rgba(255, 255, 255, 0.07);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-family: monospace;
+    font-size: 1.1em;
+    padding: 6px 0;
+    margin-top: 18px;
+    text-align: center;
+}
+footer a{
+    color: cyan;
+    text-decoration: none;
+}
+footer a:hover{
+    text-shadow: 0 0 10px cyan;
+}
+
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+
+::-webkit-scrollbar-thumb {
+background: rgba(146, 146, 146, 0.2);
+border-radius: 8px;
+}
