@@ -66,10 +66,16 @@ header img{
 
 /* ANALYTICS Website details */
 #analytics{
-    max-height: 198px;
+    height: 204px;
     margin: 0 20px;
-    padding: 10px 15px 0 15px;
+    margin-bottom: 38px;
+    padding: 10px 15px 0px 15px;
     overflow-y: scroll;
+}
+
+#noData{
+    width: 100%;
+    margin-bottom: 12px;
 }
 
 .siteDetails{
@@ -111,9 +117,8 @@ header img{
 
 .hourProgress{
     height: 5px;
-    box-shadow: 0 0 4px rgb(240, 240, 240);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    box-shadow: 0 0 2px rgb(240, 240, 240);
+    border-radius: 5px;
     margin-top: 6px;
 }
 
@@ -125,9 +130,14 @@ footer{
     border-top-right-radius: 4px;
     font-family: monospace;
     font-size: 1.1em;
-    padding: 6px 0;
-    margin-top: 18px;
+    padding-top: 5px;
+    padding-bottom: 7px;
     text-align: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 footer a{
     color: cyan;
