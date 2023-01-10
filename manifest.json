@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "author": "AKASH KUMAR SINGH",
-    "name": "TIME ANALYTICS",
-    "description": "Empowers users to analyze the time they spend on websites in their daily life.",
+    "author": "Akash Kumar Singh",
+    "name": "Time Analytics",
+    "description": "Introducing TimeAnalytics - the extension helps you track and analyze your website usage. With TimeAnalytics, you can see exactly how much time you spend on each website on daily basis.",
     "version": "1.0.0",
 
     "action": {
@@ -11,7 +11,7 @@
           "24": "logo.png",
           "32": "logo.png"
         },
-        "default_title": "TIME ANALYTICS",
+        "default_title": "Time Analytics",
         "default_popup": "popup.html"
      },
 
@@ -22,6 +22,13 @@
     "background": {
         "service_worker": "background.js"
     },
+
+    "content_scripts": [
+        {   
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
     
     "permissions": ["activeTab", "tabs", "storage"]
 }
