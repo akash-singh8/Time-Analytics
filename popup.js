@@ -44,14 +44,14 @@ function addDetails(site, mins, colour, favIcon, total) {
 
 const colors = [
   "rgb(200, 234, 255)",
-  "rgb(3, 234, 255)",
+  "rgb(0, 255, 204)",
+  "rgb(0, 183, 255)",
+  "rgb(255, 158, 3)",
   "rgb(234, 255, 3)",
   "rgb(24, 255, 3)",
-  "rgb(255, 158, 3)",
-  "rgb(0, 183, 255)",
-  "rgb(0, 255, 204)",
   "rgb(255, 3, 221)",
   "rgb(250, 35, 146)",
+  "rgb(3, 234, 255)",
   "rgb(211, 35, 250)",
   "rgb(213, 3, 255)",
   "rgb(250, 60, 35)",
@@ -106,6 +106,16 @@ chrome.storage.local.get(null, function (result) {
       barColors.push(colors[i % 34]);
     }
 
+    const timeUsage = document.getElementById("timeUsage");
+    const totalId = document.getElementById("total");
+    if (total < 60) {
+      timeUsage.style.display = "block";
+      totalId.style.display = "none";
+    } else {
+      timeUsage.style.display = "none";
+      totalId.style.display = "block";
+    }
+
     for (let i = 1; i < dataArr.length; i++) {
       const data = dataArr[i];
       addDetails(
@@ -123,8 +133,8 @@ chrome.storage.local.get(null, function (result) {
     if (hrs < 10) hrs = `0${hrs}`;
     let mins = Math.floor(total % 60);
     if (mins < 10) mins = `0${mins}`;
-    document.querySelector("#total p strong").innerText = hrs;
-    document.querySelector("#total p:last-child strong").innerText = `${mins}`;
+    totalId.querySelector("p strong").innerText = hrs;
+    totalId.querySelector("p:last-child strong").innerText = `${mins}`;
 
     const siteChart = document.getElementById("siteChart");
     new Chart("siteChart", {
@@ -133,7 +143,7 @@ chrome.storage.local.get(null, function (result) {
         labels: titles,
         datasets: [
           {
-            borderWidth: 2,
+            borderWidth: 1,
             borderColor: "rgba(50, 50, 50, 1)",
             backgroundColor: barColors,
             data: time,

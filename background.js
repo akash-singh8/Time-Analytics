@@ -28,8 +28,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
       urlP !== "edge:" &&
       urlP !== "file:" &&
       urlP !== "chrome:" &&
-      urlP !== "brave:" &&
-      urlP !== "firefox:"
+      urlP !== "brave:"
     ) {
       chrome.storage.local.get([site], function (result) {
         let data = {};
@@ -37,7 +36,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         if (siteData) {
           // console.log("Tabs length : ", tabs.length);
           data[site] = [
-            siteData[0] + (tabs.length ? Math.floor(15 / tabs.length) : 10),
+            siteData[0] + (tabs.length ? Math.floor(11 / tabs.length) : 10),
             tab.favIconUrl,
           ];
         } else {
@@ -52,5 +51,5 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   getTabs();
 
   console.log(message);
-  // sendResponse({ executing: true });
+  sendResponse({ executing: true });
 });
