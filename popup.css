@@ -32,6 +32,12 @@ header img{
     position: relative;
 }
 
+#timeUsage{
+    width: 68%;
+    margin-left: 16%;
+    margin-bottom: -220px;
+}
+
 #siteChart{
     transition: all 0.25s ease-in-out;
 }
